@@ -112,7 +112,7 @@ while trial <= length(taskschedule)  % one loop corresponds to one mouse reading
     vxy = Rot_mat*[hx;hy]; % rotation around the center
     vx = vxy(1);
     vy = vxy(2);
-    svx = -(vx + scx); % screen coordinate (mirror image)
+    svx = (vx + scx); % screen coordinate (mirror image)
     svy = vy + scy;
     r = sqrt(vx^2+vy^2);
     
