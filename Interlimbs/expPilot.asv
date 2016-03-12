@@ -1,6 +1,6 @@
-% Motor learning project 2015
-% Youngmin Oh & Kangwoo Lee
-% Updated: 8/18/2015
+% Motor learning project 2016
+% Kangwoo Lee & Joomyung Song
+% Updated: 03/11/2016
 % Schedule is changed (with baseline and more washout)
 % schedule: 1=Feedback, 4=Localization1, 5=Localization2, 6=Rest, 7=rest2
 % usage: expPilot('taskBase',99999)
@@ -391,7 +391,7 @@ while trial <= length(taskschedule)  % one loop corresponds to one mouse reading
                 data.reaction_time = reaction_time;
                 data.movement_time = movement_time;
                 data.kinematic_data = [data.kinematic_data; kinematic_data];
-                save(sprintf('../Data/subj%d-%s',subjID,schedule),'data');
+                save(sprintf('../../Data/subj%d-%s',subjID,schedule),'data');
                 kinematic_data = [];
             end
             
@@ -422,7 +422,7 @@ sch.taskschedule = taskschedule;
 sch.reachnoise = reachnoise;
 %sch.clampnoise = clampnoise;
 
-save(sprintf('Data/subj%d-%s',subjID,schedule),'data','expara','sch');
+save(sprintf('../../Data/subj%d-%s',subjID,schedule),'data','expara','sch');
 cgsound('shut')
 cgshut
 
