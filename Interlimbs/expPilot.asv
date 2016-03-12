@@ -126,7 +126,7 @@ while trial <= length(taskschedule)  % one loop corresponds to one mouse reading
                     displaymessage('Wait')
                     % cursor
                     cgpencol(1,0,0) 
-                    cgellipse(-(hx+scx),hy+scy,2*rcursor,2*rcursor,'f')
+                    cgellipse(hx+scx,hy+scy,2*rcursor,2*rcursor,'f')
                     % Waiting time, give 2sec more for localization
                     timewait = iti(trial);
                     timewait=timewait+2000;
@@ -181,7 +181,7 @@ while trial <= length(taskschedule)  % one loop corresponds to one mouse reading
                 otherwise
                     % Cursor
                     cgpencol(1,0,0)
-                    cgellipse(-(hx+scx),hy+scy,2*rcursor,2*rcursor,'f')
+                    cgellipse(hx+scx,hy+scy,2*rcursor,2*rcursor,'f')
                     timewait = iti(trial);
                     if r > rstart % check early start
                         phase = 3;
@@ -374,7 +374,7 @@ while trial <= length(taskschedule)  % one loop corresponds to one mouse reading
                 cgellipse(scx,scy,2*r,2*r)
             elseif r <= 2*rstart && r > rstart
                 cgpencol(1,0,0)
-                cgellipse(-(hx+scx),hy+scy,2*rcursor,2*rcursor,'f')
+                cgellipse(hx+scx,hy+scy,2*rcursor,2*rcursor,'f')
             elseif r <= rstart
                 phase = 0;
                 time0 = timepass;
