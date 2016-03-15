@@ -60,6 +60,8 @@ rotationangle = [0*ones(1,nFam_T) zeros(1,nL_T*6)];
     (taskschedule,targetvar_theta,reachvar_thetaControl);
 save taskBase
 
+keyboard;
+
 % load defaultVar.mat
 % taskschedule = [0*ones(1,10) repmat([4 5],1,2*nL_T)];
 % nTask = length(taskschedule);

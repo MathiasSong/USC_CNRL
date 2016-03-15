@@ -1,6 +1,6 @@
 % Motor learning project 2015
-% Youngmin Oh & Kangwoo Lee
-% Updated: 8/18/2015
+% Kangwoo Lee & Joomyung Song
+% Updated: 03/14/2016
 % Schedule is changed (with baseline and more washout)
 % schedule: 1=Feedback, 4=Localization1, 5=Localization2, 6=Rest, 7=rest2
 % usage: expPilot('taskBase',99999)
@@ -112,7 +112,7 @@ while trial <= length(taskschedule)  % one loop corresponds to one mouse reading
     vxy = Rot_mat*[hx;hy]; % rotation around the center
     vx = vxy(1);
     vy = vxy(2);
-    svx = (vx + scx); % screen coordinate (mirror image)
+    svx = vx + scx; % screen coordinate (mirror image)
     svy = vy + scy;
     r = sqrt(vx^2+vy^2);
     

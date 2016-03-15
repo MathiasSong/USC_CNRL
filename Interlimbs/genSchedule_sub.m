@@ -1,6 +1,6 @@
 %% genSchedule_sub
-% Kangwoo Lee
-% 9/17/2015
+% Kangwoo Lee & Joomyung Song
+% 03/14/2016
 % This function is a subfunction of genSchedule.m.
 % It is made only to reduce the lines of genSchedule code.
 
@@ -14,6 +14,8 @@ iti = 1000+500*rand(1,nTask);
 %targetlocation_temp = (90-targetvar_theta)+(2*targetvar_theta)*rand(1,nTask);
 targetlocation_temp = (2*targetvar_theta)*rand(1,nTask);
 targetlocation=targetlocation_temp-mod(targetlocation_temp,45)+22.5; % 45= 360/8, 8 targets
+
+keyboard;
 
 %% Temporary lines
 % Same number of each target setting
